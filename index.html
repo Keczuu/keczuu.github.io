@@ -154,7 +154,13 @@
           font-size: 1.6rem;
           transition: opacity 0.5s ease-in-out; 
         }
-
+        
+        .funny-glow {
+          -webkit-box-shadow:0px 0px 105px 3px rgb(221, 255, 221, 0.9);
+          -moz-box-shadow: 0px 0px 105px 3px rgba(221,255,221, 0.9);
+          box-shadow: 0px 0px 105px 3px rgba(221,255,221, 0.9);
+        }
+  
     </style>
     <!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FM58J84ZML"></script>
@@ -240,6 +246,22 @@
 
         updateBio();
         setInterval(changeText, 3000); 
+      });
+    </script>
+    <script>
+      const links = document.querySelectorAll('.links-container a');
+      links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+          link.classList.add('funny-glow');
+        });
+
+        link.addEventListener('mouseleave', () => {
+          link.classList.remove('funny-glow');
+        });
+
+        link.addEventListener('click', () => {
+          link.classList.toggle('funny-glow');
+        });
       });
     </script>
   </body>  
