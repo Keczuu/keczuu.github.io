@@ -229,7 +229,7 @@
           'If you got spammed by me, you are probably stupid'
         ];
         let count = 0;
-  
+    
         function changeText() {
           bioText.style.opacity = 0;
           setTimeout(() => {
@@ -238,28 +238,28 @@
             count = (count + 1) % texts.length;
           }, 500);
         }
-
+    
         function updateBio() {
           changeText();
           setTimeout(updateBio, 3000);
         }
-
+    
         updateBio();
         setInterval(changeText, 3000); 
       });
-    </script>
-    <script>
-      const links = document.querySelectorAll('.links-container a');
+    
+      const links = document.querySelectorAll('.links-container a, .icons a');
       links.forEach(link => {
         link.addEventListener('mouseenter', () => {
           link.classList.add('funny-glow');
         });
-
+    
         link.addEventListener('mouseleave', () => {
           link.classList.remove('funny-glow');
         });
-
-        link.addEventListener('click', () => {
+    
+        link.addEventListener('click', (event) => {
+          event.preventDefault(); // Prevents default link behavior if needed
           link.classList.toggle('funny-glow');
         });
       });
