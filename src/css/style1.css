@@ -10,6 +10,7 @@ body {
   background-color: #2c2c2c;
   color: #fff;
   text-align: center;
+  min-height: 100vh;
 }
 
 header {
@@ -25,6 +26,7 @@ h1 {
 }
 
 main {
+  flex: 1;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -67,13 +69,14 @@ main {
 }
 
 footer {
-  position: absolute;
   width: 100%;
-  bottom: 0;
   text-align: center;
   padding: 20px 0;
   background-color: #222;
   color: #fff;
+  position: fixed;
+  bottom: 0;
+  height: 60px;
 }
 
 .changing-text {
@@ -81,4 +84,23 @@ footer {
   color: #fdf5e6;
   font-size: 1.6rem;
   transition: opacity 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  main {
+    padding: 10px; /* Adjust main padding for smaller screens */
+  }
+
+  .profile img {
+    width: 100px; /* Adjust profile image size for smaller screens */
+  }
+
+  .links a {
+    padding: 10px 30px; /* Adjust link padding for smaller screens */
+    font-size: 12pt; /* Adjust link font size for smaller screens */
+  }
 }
