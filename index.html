@@ -1,235 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
+    <meta charset="UTF-8" />
     <title>keczuu.lol</title>
-    <style>
-
-    body {
-          background: linear-gradient(to right, #614385, #516395);
-          background-size: 200% auto;
-          animation: gradientAnimation 5s ease infinite;
-        }
-
-        @keyframes gradientAnimation {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
-        }
-
-        .container {
-          width: 100%;
-          height: 100%;
-          padding-right: 15px;
-          padding-left: 15px;
-          margin-right: auto;
-          margin-left: auto;
-        }
-
-        .image {
-          background-image: url("https://avatars.githubusercontent.com/u/151464168?s=400&u=f5d28b3230ce37fb74959ca7823a7df9d1a4ae06&v=4");
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center; 
-          width: 200px;
-          height: 200px;
-          border-radius: 50%;
-          margin: 0 auto;
-          border: 5px solid #fdf5e6;
-        }
-
-        a {
-          font-size: large;
-        }
-
-        .w3-border {
-          border: 3px solid #ccc !important;
-        }
-
-        .links-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 20px;
-        }
-
-        .links-container a {
-          width: 100%;
-          color: #414345 !important;
-          transition: 0.2s;
-        }
-
-        .links-container a:hover {
-          opacity: 1;
-        }
-
-        .profession {
-          margin-top: 15px !important;
-        }
-
-        .profession span {
-          font-size: 22px;
-        }
-
-        .icons {
-          display: flex;
-          justify-content: center;
-          gap: 10px;
-        }
-
-        .icons a {
-          text-decoration: none;
-        }
-
-        .icons a svg {
-          fill: #fdf5e6 !important;
-          transform: scale(1);
-        }
-
-        .border {
-          border: 3px ridge #fdf5e6;
-        }
-
-        .contact {
-          text-align: center;
-          color: #fdf5e6;
-        }
-
-        .contact .info {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 15px;
-        }
-
-        .contact .info span {
-          display: flex;
-          align-items: center;
-          gap: 15px;
-        }
-
-        .bio {
-          font-size: 16px;
-          text-align: center;
-        }
-
-        @media screen and (min-width: 768px) {
-          .link {
-            width: 100%;
-          }
-
-          a {
-            font-size: x-large;
-          }
-
-        }
-        @media screen and (min-width: 576px) {
-          .container {
-            max-width: 540px;
-          }
-
-          .profession span {
-            font-size: 32px;
-          }
-          
-          .bio {
-            font-size: 15px;
-          }
-
-        }
-
-        .bio-text {
-          font-weight: bolder;
-          color: #fdf5e6;
-          font-size: 1.6rem;
-          transition: opacity 0.5s ease-in-out; 
-        }
-        
-        .funny-glow {
-          -webkit-box-shadow:0px 0px 105px 3px rgb(221, 255, 221, 0.9);
-          -moz-box-shadow: 0px 0px 105px 3px rgba(221,255,221, 0.9);
-          box-shadow: 0px 0px 105px 3px rgba(221,255,221, 0.9);
-        }
-  
-    </style>
-    <!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FM58J84ZML"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	
-	  gtag('config', 'G-FM58J84ZML');
-	</script>
+    <link rel="stylesheet" href="src/css/style1.css" />
+    <link rel="icon" href="src/img/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
   </head>
   <body>
-    <!-- Content container -->
-    <div class="container">
+    <header>
+      <span class="changing-text">‎‎‎‎‎‎‎‎ㅤ</span>
+    </header>
 
-      <!-- Image and name container -->
-      <div class="w3-margin-top" style="text-align: center">
-        <div class="image w3-round"></div>
-        <p class="profession"><span class="w3-padding w3-margin" style="font-weight: bolder; color: #f2e5e0">Kec<span style="color: #f2e5e0">zuu</span></span></p>
-        <p class="bio">
-          <span class="bio-text"></span>
-        </p><br>
+    <main>
+      <div class="profile">
+        <img src="src/img/profile-picture.jpg" alt="Profile Picture" />
+        <h2>@Keczuu</h2>
       </div>
 
-      <!-- Links section 1 -->
-      <div class="links-container">
-        <a href="https://github.com/Keczuu?tab=repositories" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">My projects</a>
-        <a href="https://www.youtube.com/channel/UCD3bKcN1D3aGqG9yI5faXVg" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">My youtube</a>
-        <a href="https://soundcloud.com/discover/sets/your-playback::arnoldzik-uwu:2023" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">My soundcloud recap</a>
-      </div>
-      
-      <!-- Links section 2 -->
-      <div class="icons w3-padding">
-        <a href="https://twitter.com/KeczuuToSucz" target="_blank">
-          <img src="https://cdn.discordapp.com/attachments/758052590377500753/1190273826471297155/xTPG5rW.png" alt="X Icon">
+      <div class="links">
+        <a href="https://www.youtube.com/channel/UCD3bKcN1D3aGqG9yI5faXVg">
+          <i class="fab fa-youtube"></i> Youtube
         </a>
-        <a href="https://github.com/Keczuu" target="_blank">
-          <img src="https://cdn.discordapp.com/attachments/758052590377500753/1190273659588313088/qw2zTuH.png" alt="GitHub Icon">
+        <a href="https://github.com/Keczuu">
+          <i class="fab fa-github"></i> GitHub
         </a>
-      </div><br>
-      
-        <div class="contact">
-          <p class=""><span class="w3-padding w3-margin" style="font-weight: bolder; color: #fdf5e6">CONTACT</span></p>
-          <div class="info">
-			<a href="https://discord.com/invite/FY2EwHBK">
-				<span>
-				  <img src="https://cdn.discordapp.com/attachments/758052590377500753/1190272566422687774/TRQv7Qa.png" alt="Discord icon"> Keczuu
-				</span>
-			</a>	
-            <a href = "https://instagram.com/keczuutosucz">
-              <span>
-                <img src="https://cdn.discordapp.com/attachments/758052590377500753/1190272811030302760/kRPagH2.png" alt="Insta icon"> @KeczuuToSucz
-              </span>
-            </a>	  
-          </div>
-        </div><br>
+        <a href="https://instagram.com/KeczuuToSucz">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://twitter.com/KeczuuToSucz">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://soundcloud.com/arnoldzik-uwu">
+          <i class="fab fa-soundcloud"></i> Soundcloud
+        </a>
       </div>
+    </main>
 
-    </div>
+    <footer>
+      <p>Made by Keczuu &copy; All rights reserved</p>
+    </footer>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const bioText = document.querySelector('.bio-text');
+      document.addEventListener("DOMContentLoaded", function () {
+        const bioText = document.querySelector(".changing-text");
         const texts = [
-          'Random furry with IT passion',
-          'Please give a star on my github repos 😩',
-          'If you got spammed by me, you are probably stupid'
+          "Random furry with IT passion",
+          "Please give a star on my github repos 😩",
+          "If you got spammed by me, you are probably stupid",
         ];
         let count = 0;
-    
+
         function changeText() {
           bioText.style.opacity = 0;
           setTimeout(() => {
@@ -238,31 +61,18 @@
             count = (count + 1) % texts.length;
           }, 500);
         }
-    
-        function updateBio() {
-          changeText();
-          setTimeout(updateBio, 3000);
-        }
-    
-        updateBio();
-        setInterval(changeText, 3000); 
-      });
-    
-      const links = document.querySelectorAll('.links-container a, .icons a');
-      links.forEach(link => {
-        link.addEventListener('mouseenter', () => {
-          link.classList.add('funny-glow');
-        });
-    
-        link.addEventListener('mouseleave', () => {
-          link.classList.remove('funny-glow');
-        });
-    
-        link.addEventListener('click', (event) => {
-          event.preventDefault(); // Prevents default link behavior if needed
-          link.classList.toggle('funny-glow');
-        });
+
+        changeText();
+        setInterval(changeText, 3000);
       });
     </script>
-  </body>  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FM58J84ZML"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-FM58J84ZML');
+	</script>
+  </body>
 </html>
