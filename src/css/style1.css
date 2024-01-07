@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap");
 html,
 body {
-  overflow: hidden;
   margin: 0;
   padding: 0;
 }
@@ -31,7 +30,7 @@ main {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .profile {

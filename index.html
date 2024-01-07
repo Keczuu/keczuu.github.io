@@ -87,17 +87,23 @@
         const links = document.querySelectorAll(".links a.glass");
 
         links.forEach((link) => {
+          link.addEventListener("click", (event) => {
+            if (!link.classList.contains("glow")) {
+              event.preventDefault();
+
+              link.classList.add("glow");
+              setTimeout(() => {
+                window.location.href = link.href;
+              }, 500);
+            }
+          });
+
           link.addEventListener("mouseenter", () => {
             link.classList.add("glow");
           });
 
           link.addEventListener("mouseleave", () => {
             link.classList.remove("glow");
-          });
-
-          link.addEventListener("click", (event) => {
-            event.preventDefault();
-            link.classList.toggle("glow");
           });
         });
       });
