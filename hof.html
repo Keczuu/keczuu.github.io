@@ -12,6 +12,11 @@
     />
   </head>
   <body>
+    <audio id="backgroundAudio" controls>
+      <source src="src/img/uuu_sigma.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <img id="hiddenGif" src="src/img/sigma.gif">
     <header>
       <h1>Hall of Fame</h1>
     </header>
@@ -40,6 +45,26 @@
       gtag("js", new Date());
 
       gtag("config", "G-FM58J84ZML");
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const audio = document.getElementById("backgroundAudio");
+        const hiddenGif = document.getElementById("hiddenGif");
+        let sequence = "";
+        document.body.addEventListener("keydown", function(event) {
+          sequence += event.key.toLowerCase();
+          if (sequence === "sigma") {
+            audio.play();
+            document.querySelector('main').innerHTML = '';
+            document.querySelector('header').innerHTML = '';
+            document.querySelector('footer').innerHTML = '';
+            setTimeout(function() {
+              hiddenGif.style.display = "block";
+            }, 10800);
+            sequence = "";
+          }
+        });
+      });
     </script>
   </body>
 </html>
