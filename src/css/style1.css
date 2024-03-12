@@ -296,3 +296,103 @@ transition: width 0.1s linear;
     backdrop-filter: blur(5px);
     font-size: 24px;
 }
+
+.rainbow-box {
+    background-color: #302244;
+    border: 5px solid transparent;
+    border-image: linear-gradient(
+      to bottom right,
+      #b827fc 0%,
+      #2c90fc 25%,
+      #b8fd33 50%,
+      #fec837 75%,
+      #fd1892 100%
+    );
+    border-image-slice: 1;
+    display: inline-block;
+  }
+
+  .links a {
+    font-family: "Chivo", sans-serif;
+    background-color: #222;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    color: #ffffff;
+    max-width: 300px;
+    width: auto;
+    display: block;
+    margin: 20px auto;
+    padding: 15px 90px;
+    font-size: 15pt;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .links a:hover {
+    background-color: transparent;
+    color: #fff;
+  }
+  
+  .links a:hover {
+    background-color: #111;
+  }
+
+.footer-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 200%;
+    animation: slideAnimation 5s linear infinite;
+  }
+  
+  #backgroundAudio {
+    display: none;
+  }
+  
+  #hiddenGif {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  @keyframes slideAnimation {
+    0%, 100% {
+      transform: translateX(0%);
+    }
+    50% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    body {
+      font-size: 16px; /* Adjust font size for smaller screens */
+    }
+  
+    main {
+      padding: 10px; /* Adjust main padding for smaller screens */
+    }
+  
+    .profile img {
+      width: 100px; /* Adjust profile image size for smaller screens */
+    }
+  
+    .links a {
+      padding: 10px 30px; /* Adjust link padding for smaller screens */
+      font-size: 12pt; /* Adjust link font size for smaller screens */
+    }
+  }
+  
