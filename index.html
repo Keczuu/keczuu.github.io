@@ -12,6 +12,9 @@
     <title>keczuu.lol</title>
 </head>
 <body>
+  <div class="overlay" id="overlay">
+    <div>Click to continue</div>
+  </div>
     <div class="header">
         <div class="changing-text"></div>
     </div>
@@ -79,6 +82,17 @@
         <p>Made by Keczuu &copy; All rights reserved</p>
     </div>
 
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const overlay = document.getElementById("overlay");
+          
+          overlay.addEventListener("click", function () {
+              overlay.style.display = "none";
+              playSong();
+          });
+      });
+  </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
           const bioText = document.querySelector(".changing-text");
