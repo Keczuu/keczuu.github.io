@@ -1,131 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="UTF-8" />
-    <title>keczuu.lol</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/style1.css" />
     <link rel="icon" href="src/img/logo.png" />
     <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    />
-  </head>
-  <body>
-    <header>
-      <span class="changing-text">‎‎‎‎‎‎‎‎ㅤ</span>
-    </header>
-
-    <main>
-      <div class="profile">
-        <img src="src/img/profile-picture.jpg" alt="Profile Picture" />
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  />
+    <title>keczuu.lol</title>
+</head>
+<body>
+    <div class="header">
+        <div class="changing-text"></div>
+    </div>
+    <div class="profile">
+        <img src="src\img\profile-picture.jpg" alt="Profile Picture" />
         <h2>@Keczuu</h2>
       </div>
-
-      <div class="links">
-        <a
-          href="https://www.youtube.com/channel/UCD3bKcN1D3aGqG9yI5faXVg"
-          class="glass"
-          target="_blank"
-        >
-          <i class="fab fa-youtube"></i> Youtube
+    <div class="buttons">
+        <a href="https://www.youtube.com/channel/UCD3bKcN1D3aGqG9yI5faXVg" class="glass" target="_blank">
+            <i class="fab fa-youtube"></i>
         </a>
         <a href="https://github.com/Keczuu" class="glass" target="_blank">
-          <i class="fab fa-github"></i> GitHub
+            <i class="fab fa-github"></i>
         </a>
-        <a
-          href="https://instagram.com/KeczuuToSucz"
-          class="glass"
-          target="_blank"
-        >
-          <i class="fab fa-instagram"></i> Instagram
+        <a href="https://instagram.com/KeczuuToSucz" class="glass" target="_blank">
+            <i class="fab fa-instagram"></i>
         </a>
-        <a
-          href="https://twitter.com/KeczuuToSucz"
-          class="glass"
-          target="_blank"
-        >
-          <i class="fab fa-twitter"></i> Twitter
+        <a href="https://twitter.com/KeczuuToSucz" class="glass" target="_blank">
+            <i class="fab fa-twitter"></i>
         </a>
-        <a
-          href="https://soundcloud.com/arnoldzik-uwu"
-          class="glass"
-          target="_blank"
-        >
-          <i class="fab fa-soundcloud"></i> Soundcloud
+        <a href="https://soundcloud.com/arnoldzik-uwu" class="glass" target="_blank">
+            <i class="fab fa-soundcloud"></i>
         </a>
-        <a href="https://discord.gg/PXDAPVuz" class="glass" target="_blank">
-          <i class="fab fa-discord"></i> Discord
+        <a href="discord.gg/vqGtj46v" class="glass" target="_blank">
+            <i class="fab fa-discord"></i>
         </a>
         <a href="https://keczuu.lol/hof" class="glass">
-          <i class="fa fa-crown"></i> Hall of Fame
+            <div class="hof-icon">
+                <i class="fa fa-crown"></i>
+                Hall Of Fame
+            </div>
         </a>
+    </div>
+    <div class="music-container" id="music-container">
+        <div class="music-info">
+          <h2 id="title" class="title"></h2>
+          <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+          </div>
+        </div>
+        <audio
+          src="src/img/Szachownica.mp3"
+          id="audio"
+        ></audio>
+        <div class="img-container">
+          <img
+            src="https://i1.sndcdn.com/artworks-4lZzBRysMvvhJFzW-ZxaNZQ-t500x500.jpg"
+            alt="music-cover"
+            id="cover"
+          />
+        </div>
+        <div class="navigation">
+          <button id="prev" class="action-btn">
+            <i class="fas fa-backward"></i>
+          </button>
+          <button id="play" class="action-btn action-btn-big">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="next" class="action-btn">
+            <i class="fas fa-forward"></i>
+          </button>
+        </div>
       </div>
-    </main>
+    <div class="footer">
+        <p>Made by Keczuu &copy; All rights reserved</p>
+    </div>
 
-    <footer>
-      <p>Made by Keczuu &copy; All rights reserved</p>
-    </footer>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const bioText = document.querySelector(".changing-text");
-        const texts = [
-          "Random furry with IT passion",
-          "Please give a star on my github repos 😩",
-          "If you got spammed by me, you are probably stupid",
-        ];
-        let count = 0;
-
-        function changeText() {
-          bioText.style.opacity = 0;
-          setTimeout(() => {
-            bioText.textContent = texts[count];
-            bioText.style.opacity = 1;
-            count = (count + 1) % texts.length;
-          }, 500);
-        }
-
-        changeText();
-        setInterval(changeText, 3000);
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const links = document.querySelectorAll(".links a.glass");
-
-        links.forEach((link) => {
-          link.addEventListener("click", (event) => {
-            if (!link.classList.contains("glow")) {
-              event.preventDefault();
-
+        document.addEventListener("DOMContentLoaded", function () {
+          const bioText = document.querySelector(".changing-text");
+          const texts = [
+            "Random furry with IT passion",
+            "Please give a star on my github repos 😩",
+            "If you got spammed by me, you are probably stupid",
+          ];
+          let count = 0;
+  
+          function changeText() {
+            bioText.style.opacity = 0;
+            setTimeout(() => {
+              bioText.textContent = texts[count];
+              bioText.style.opacity = 1;
+              count = (count + 1) % texts.length;
+            }, 500);
+          }
+  
+          changeText();
+          setInterval(changeText, 3000);
+        });
+  
+        document.addEventListener("DOMContentLoaded", function () {
+          const links = document.querySelectorAll(".buttons a.glass");
+  
+          links.forEach((link) => {
+            link.addEventListener("click", (event) => {
+              if (!link.classList.contains("glow")) {
+                event.preventDefault();
+  
+                link.classList.add("glow");
+                setTimeout(() => {
+                  window.location.href = link.href;
+                }, 500);
+              }
+            });
+  
+            link.addEventListener("mouseenter", () => {
               link.classList.add("glow");
-              setTimeout(() => {
-                window.location.href = link.href;
-              }, 500);
-            }
-          });
-
-          link.addEventListener("mouseenter", () => {
-            link.classList.add("glow");
-          });
-
-          link.addEventListener("mouseleave", () => {
-            link.classList.remove("glow");
+            });
+  
+            link.addEventListener("mouseleave", () => {
+              link.classList.remove("glow");
+            });
           });
         });
-      });
-    </script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-FM58J84ZML"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+      </script>
+        <script>
+            const musicContainer = document.getElementById("music-container");
+            const playButton = document.getElementById("play");
+            const prevButton = document.getElementById("prev");
+            const nextButton = document.getElementById("next");
+            const audio = document.getElementById("audio");
+            const progress = document.getElementById("progress");
+            const progressContainer = document.getElementById("progress-container");
+            const title = document.getElementById("title");
+            const cover = document.getElementById("cover");
 
-      gtag("config", "G-FM58J84ZML");
-    </script>
-  </body>
+            const songs = ["szachownica", "18000oswiecenie", "pager"];
+            let songIndex = 1;
+
+            function getSongTitle(song) {
+            return song.charAt(0).toUpperCase() + song.slice(1);
+            }
+
+            function loadSong(song) {
+            title.innerText = getSongTitle(song);
+            audio.src = `src/img/${song}.mp3`;
+            cover.src = `src/img/${song}.jpg`;
+            }
+
+            function playSong() {
+            musicContainer.classList.add("play");
+            playButton.querySelector("i.fas").classList.remove("fa-play");
+            playButton.querySelector("i.fas").classList.add("fa-pause");
+            audio.play();
+            }
+
+            function pauseSong() {
+            musicContainer.classList.remove("play");
+            playButton.querySelector("i.fas").classList.remove("fa-pause");
+            playButton.querySelector("i.fas").classList.add("fa-play");
+            audio.pause();
+            }
+
+            function prevSong() {
+            songIndex--;
+            if (songIndex < 0) songIndex = songs.length - 1;
+            loadSong(songs[songIndex]);
+            playSong();
+            }
+
+            function nextSong() {
+            songIndex++;
+            if (songIndex > songs.length - 1) songIndex = 0;
+            loadSong(songs[songIndex]);
+            playSong();
+            }
+
+            function updateProgress(e) {
+            const { duration, currentTime } = e.srcElement;
+            const progressPercent = (currentTime / duration) * 100;
+            progress.style.width = `${progressPercent}%`;
+            }
+
+            function setProgress(e) {
+            const width = this.clientWidth;
+            const clickX = e.offsetX;
+            const duration = audio.duration;
+            audio.currentTime = (clickX / width) * duration;
+            }
+
+            // Event Listeners
+            playButton.addEventListener("click", () => {
+            const isPlaying = musicContainer.classList.contains("play");
+            isPlaying ? pauseSong() : playSong();
+            });
+
+            prevButton.addEventListener("click", prevSong);
+            nextButton.addEventListener("click", nextSong);
+
+            audio.addEventListener("timeupdate", updateProgress);
+            progressContainer.addEventListener("click", setProgress);
+
+            audio.addEventListener("ended", nextSong);
+
+            // Init
+            loadSong(songs[songIndex]);
+        </script>
+</body>
 </html>
