@@ -376,23 +376,48 @@ transition: width 0.1s linear;
         background-position: 0 0;
     }
   }
-  
-  @media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 600px) {
     body {
-      font-size: 16px; /* Adjust font size for smaller screens */
+        font-size: 16px;
     }
-  
-    main {
-      padding: 10px; /* Adjust main padding for smaller screens */
-    }
-  
+
     .profile img {
-      width: 100px; /* Adjust profile image size for smaller screens */
+        width: 100px;
     }
-  
-    .links a {
-      padding: 10px 30px; /* Adjust link padding for smaller screens */
-      font-size: 12pt; /* Adjust link font size for smaller screens */
+
+    .buttons {
+        padding: 15px 20px;
     }
-  }
-  
+
+    .buttons button {
+        padding: 10px 15px; 
+        font-size: 14px; 
+    }
+
+    .music-info {
+        width: 100%; 
+        padding: 10px;
+    }
+
+    .music-info h2 {
+        font-size: 1.2rem; 
+    }
+
+    .progress-container {
+        margin: 5px 0;
+    }
+
+    .progress-container,
+    .progress {
+        height: 2px;
+    }
+
+    .music-container {
+        padding: 10px 15px;
+    }
+
+    .navigation {
+        margin-top: 10px;
+    }
+}
