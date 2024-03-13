@@ -56,12 +56,12 @@
           </div>
         </div>
         <audio
-          src="src/img/szachownica.mp3"
+          src="src/img/WAIT A SEC.mp3"
           id="audio"
         ></audio>
         <div class="img-container">
           <img
-            src="src/img/szachownica.jpg"
+            src="src/img/WAIT A SEC.jpg"
             alt="music-cover"
             id="cover"
           />
@@ -79,7 +79,7 @@
         </div>
       </div>
     <div class="footer">
-        <p>Made by Keczuu &copy; All rights reserved</p>
+        <p>Made by Keczuu © All rights reserved</p>
     </div>
 
 
@@ -152,7 +152,7 @@
             const title = document.getElementById("title");
             const cover = document.getElementById("cover");
 
-            const songs = ["18000oswiecenie", "szachownica", "pager"];
+            const songs = ["18000oswiecenie", "YABOL - WAIT A SEC", "Magik Dyspozytor - TRASH GIRL"];
             let songIndex = 1;
 
             function getSongTitle(song) {
@@ -206,6 +206,22 @@
             audio.currentTime = (clickX / width) * duration;
             }
 
+            document.addEventListener("DOMContentLoaded", function () {
+            const audio = document.getElementById("audio");
+            const title = document.getElementById("title");
+
+            audio.addEventListener("play", function () {
+                let songName = audio.currentSrc.split('/').pop().split('.')[0];
+                songName = decodeURIComponent(songName); // Decode URI components to get spaces
+                if (songName.includes("YABOL - WAIT A SEC")) {
+                    title.innerHTML = '<a href="https://open.spotify.com/track/4SE6JnDQCOROeT3JKVwScB?si=224959c319f648a2" target="_blank" style="color: white; text-decoration: none;">YABOL - WAIT A SEC</a>';
+                } else if (songName.includes("Magik Dyspozytor - TRASH GIRL")) {
+                    title.innerHTML = '<a href="https://open.spotify.com/track/08WRCD4Fxe0ds3T7AekoE9?si=cb73bc24a2334f45" target="_blank" style="color: white; text-decoration: none;">Magik Dyspozytor - TRASH GIRL</a>';
+                } else {
+                    title.innerHTML = getSongTitle(songName);
+                }
+            });
+        });
             // Event Listeners
             playButton.addEventListener("click", () => {
             const isPlaying = musicContainer.classList.contains("play");

@@ -94,6 +94,12 @@ border: 4px solid #fff;
 .buttons a:nth-child(7) {
     grid-column: span 3; /* Make the last button span 3 columns */
 }
+
+.title a {
+    color: white;
+    text-decoration: none;
+}
+
 .glow {
 background: #ffffff33 !important;
 border-radius: 16px !important;
